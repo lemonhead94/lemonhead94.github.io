@@ -1,0 +1,20 @@
+<package>
+	<id>com.lemonhead94.batterypowerlie</id>
+	<name>Battery Power Lie</name>
+	<version>0.0.1-1</version>
+	<compatibility>
+		<firmware>
+			<maxiOS>8.4</maxiOS>
+			<otherVersions>unconfirmed</otherVersions>
+		</firmware>
+	</compatibility>
+	<dependencies></dependencies>
+	<descriptionlist>
+		<description>This is just a sample Project.</description>
+	</descriptionlist>
+	<screenshots></screenshots>
+	<changelog>
+		<change>Initial release</change>
+	</changelog>
+	<links></links>
+</package>
