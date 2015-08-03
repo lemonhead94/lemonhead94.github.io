@@ -1,9 +1,14 @@
 <repo>
 	<footerlinks>
 		<link>
-			<name>Follow me on Twitter</name>
-			<url>https://twitter.com/_lemonhead94_</url>
-			<iconclass>glyphicon glyphicon-user</iconclass>
+			<name>Contact me on Reddit</name>
+			<url>https://www.reddit.com/user/lemonhead94</url>
+			<iconclass>icon-reddit</iconclass>
 		</link>
+        <link>
+            <name>Follow me on Twitter</name>
+            <url>https://twitter.com/_lemonhead94_</url>
+            <iconclass>icon-twitter</iconclass>
+        </link>
 	</footerlinks>
 </repo>

@@ -1,0 +1,17 @@
+.icon-reddit {
+    background-image: url("../images/reddit.png");
+    background-position: center center;
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+}
+
+.icon-twitter {
+    background-image: url("../images/twitter.png");
+    background-position: center center;
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+}
+
+
