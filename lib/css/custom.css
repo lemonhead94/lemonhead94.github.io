@@ -39,6 +39,11 @@
     color: black;
 }
 
+.carousel-indicators{
+    position:relative;
+    bottom: -10px;
+}
+
 /* iPhone < 5: */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     .carousel-inner > .item > img,
