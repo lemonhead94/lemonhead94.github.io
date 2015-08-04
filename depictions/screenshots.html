@@ -18,9 +18,33 @@
   </style>
   <script type="text/javascript">
   
-	bundleid = $.QueryString['p'];	
+	bundleid = $.QueryString['p'];
 
-    var contentBlocks = 	{
+    var contentBlocks = {
+        "#screenshotCarousel" :
+        {"type":"custom"
+            ,"source" :"package>screenshots>screenshot"
+            ,"render" : function(element,source) {
+            console.log($(source).size());
+            if ($(source).size() == 0) {
+                $(element).append($("<div class='alert alert-danger'>The aren't any screenshots for this package</div>"));
+                return;
+            }
+            $.each(source, function(index,data) {
+                var th;
+                if(index == 0) {
+                    th = $("<li data-target='#myCarousel' data-slide-to='0' class='active'></li>");
+                } else {
+                    th = $("<li data-target='#myCarousel' data-slide-to='" + index + "'></li>");
+                }
+                $(element).append(th);
+            });
+
+        }
+        }
+    }
+
+    var contentBlocks2 = 	{
         "#screenshotsList"	: 
 			{"type":"custom"  
 				,"source" :"package>screenshots>screenshot"
@@ -48,6 +72,7 @@
 				}
 			}
 	}
+
     $( document ).ready(function() {
         $.ajax({
             type    : "GET",
@@ -56,6 +81,7 @@
             success : function(xml){
 				document.title = $(xml).find("package>name").text();
             	data_loader_engine(contentBlocks,xml)
+                data_loader_engine(contentBlocks2,xml)
             },
 			cache   : false,
             error: function() {
@@ -74,12 +100,9 @@
 	<div class="container">
         <h5>SCREENSHOTS</h5>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
+            <ol class="carousel-indicators" id="screenshotCarousel">
             </ol>
-            <div id="screenshotsList"class="carousel-inner" role="listbox">
+            <div id="screenshotsList" class="carousel-inner" role="listbox">
 
             </div>
             <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
