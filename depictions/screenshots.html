@@ -30,13 +30,17 @@
 						return;
 					}
 					$.each(source, function(index,data) {
-						var th = $("<div class='thumbnail'>");
-						th.append($("<p>")
-							.text($(data).find('description').text())
-						)
-						th.append($("<img>")
-							.attr("src",bundleid+'/screenshots/'+$(data).find('image').text())
-						)
+                        var th;
+                        if(index.equals(0)) {
+                            th = $("<div class='item active'>");
+                        } else {
+                            th = $("<div class='item'>");
+                        }
+                        var image = $("<img>");
+                        image.attr("src",bundleid+'/screenshots/'+$(data).find('image').text())
+                        image.attr("alt", $(data).find('description').text())
+                        th.append(image)
+                        th.append("</div>")
 						$(element).append(th);
 					});
 					
@@ -67,9 +71,17 @@
 
 <div id="packageInformation">
 	<div class="container">
-		<h5>SCREENSHOTS</h5>
-		<ul id="screenshotsList" class="list-group">
-		</ul>
+        <h5>SCREENSHOTS</h5>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div id="screenshotsList"class="carousel-inner" role="listbox">
+
+            </div>
+        </div>
 	</div>
 </div>
 <div id="packageError" style="display:none">
