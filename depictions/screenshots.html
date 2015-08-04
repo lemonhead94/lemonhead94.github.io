@@ -67,11 +67,11 @@
                         image.attr("src",bundleid+'/screenshots/'+$(data).find('image').text())
                         image.attr("alt", $(data).find('description').text())
                         th.append(image)
-                        var caption = $("<div class='carousel-caption'>");
-                        var titel = $(bundleid.split(".")).last()[0];
+                        /*var caption = $("<div class='carousel-caption'>");
+                        var title = $(bundleid.split(".")).last()[0];
                         caption.append($("<h3>" + titel + "</h3>"))
                         caption.append($("<p>" + $(data).find('description').text() + "</p></div>"))
-                        th.append(caption)
+                        th.append(caption)*/
                         th.append($("</div>"))
 						$(element).append(th);
 					});
