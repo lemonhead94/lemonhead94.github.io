@@ -25,9 +25,13 @@
 			<image>cydia.jpg</image>
 		</screenshot>		
 		<screenshot>
-			<description>This is a description for screenshot 2. It's another Cydia!</description>
-			<image>cydia.jpg</image>
-		</screenshot>		
+			<description>This is a description for screenshot 2. It's another Battery Theme!</description>
+			<image>shot1.jpg</image>
+		</screenshot>
+        <screenshot>
+            <description>This is a description for screenshot 3. It's a thumbnail!</description>
+            <image>shot1-thumb.jpg</image>
+        </screenshot>
 	</screenshots>
 	<changelog>
 		<change>Second release</change>
