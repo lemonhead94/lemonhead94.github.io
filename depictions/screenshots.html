@@ -57,11 +57,11 @@
 					$.each(source, function(index,data) {
                         var th;
                         if(index == 0) {
-                            th = $("<div class='item active'>");
+                            th = $("<div class='item carouselImgHeight active'>");
                         } else {
-                            th = $("<div class='item'>");
+                            th = $("<div class='item carouselImgHeight'>");
                         }
-                        var image = $("<img>");
+                        var image = $("<img class='carouselImgHeight'>");
                         image.attr("src",bundleid+'/screenshots/'+$(data).find('image').text())
                         image.attr("alt", $(data).find('description').text())
                         th.append(image)
