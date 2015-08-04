@@ -43,7 +43,7 @@
         height: 240px;
     }
     .hideOnMobile {
-        display: block;
+        display: none;
     }
 }
 
@@ -55,7 +55,7 @@
         height: 284px;
     }
     .hideOnMobile {
-        display: block;
+        display: none;
     }
 }
 
@@ -67,7 +67,7 @@
         height: 333.5px;
     }
     .hideOnMobile {
-        display: block;
+        display: none;
     }
 }
 
@@ -79,7 +79,7 @@
         height: 368px;
     }
     .hideOnMobile {
-        display: block;
+        display: none;
     }
 }
 
@@ -91,6 +91,6 @@
         height: 512px;
     }
     .hideOnMobile {
-        display: block;
+        display: none;
     }
 }
