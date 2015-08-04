@@ -26,13 +26,12 @@
 
 .carouselImgHeight img {
     width: auto;
-    height: 300px;
+    height: 512px;
 }
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
     margin: auto;
-    height: auto;
 }
 
 .carousel-caption {
