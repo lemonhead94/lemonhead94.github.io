@@ -67,10 +67,10 @@
                         th.append(image)
                         var caption = $("<div class='carousel-caption'>");
                         var titel = $(bundleid.split(".")).last()[0];
-                        caption.append($("<h3>" + titel + "</h3>")
-                        caption.append($("<p>" + $(data).find('description').text() + "</p></div>")
+                        caption.append($("<h3>") + titel + $("</h3>"))
+                        caption.append($("<p>") + $(data).find('description').text() + $("</p></div>"))
                         th.append(caption)
-                        th.append("</div>")
+                        th.append($("</div>"))
 						$(element).append(th);
 					});
 					
