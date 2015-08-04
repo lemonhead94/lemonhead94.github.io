@@ -26,12 +26,56 @@
 
 .carouselImgHeight img {
     width: auto;
-    height: 225px;
-    max-height: 225px;
+    max-height: 512px;
 }
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    width: 70%;
     margin: auto;
+    height: auto;
+}
+
+/* iPhone < 5: */
+@media screen and (device-aspect-ratio: 2/3) {
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        margin: auto;
+        height: 240px;
+    }
+}
+
+/* iPhone 5: */
+@media screen and (device-aspect-ratio: 40/71) {
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        margin: auto;
+        height: 284px;
+    }
+}
+
+/* iPhone 6: */
+@media screen and (device-aspect-ratio: 667/375) {
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        margin: auto;
+        height: 333.5px;
+    }
+}
+
+/* iPhone 6 Plus: */
+@media screen and (device-aspect-ratio: 16/9) {
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        margin: auto;
+        height: 368px;
+    }
+}
+
+/* iPad: */
+@media screen and (device-aspect-ratio: 3/4) {
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        margin: auto;
+        height: 512px;
+    }
 }
