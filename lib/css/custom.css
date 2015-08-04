@@ -26,7 +26,7 @@
 
 .carouselImgHeight img {
     width: auto;
-    max-height: 512px;
+    height: 512px;
 }
 
 .carousel-inner > .item > img,
