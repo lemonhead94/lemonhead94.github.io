@@ -42,6 +42,9 @@
         margin: auto;
         height: 240px;
     }
+    .hideOnMobile {
+        display: block;
+    }
 }
 
 /* iPhone 5: */
@@ -50,6 +53,9 @@
     .carousel-inner > .item > a > img {
         margin: auto;
         height: 284px;
+    }
+    .hideOnMobile {
+        display: block;
     }
 }
 
@@ -60,6 +66,9 @@
         margin: auto;
         height: 333.5px;
     }
+    .hideOnMobile {
+        display: block;
+    }
 }
 
 /* iPhone 6 Plus: */
@@ -69,6 +78,9 @@
         margin: auto;
         height: 368px;
     }
+    .hideOnMobile {
+        display: block;
+    }
 }
 
 /* iPad: */
@@ -77,5 +89,8 @@
     .carousel-inner > .item > a > img {
         margin: auto;
         height: 512px;
+    }
+    .hideOnMobile {
+        display: block;
     }
 }
