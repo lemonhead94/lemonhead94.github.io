@@ -3,12 +3,12 @@
 		<link>
 			<name>Contact me on Reddit</name>
 			<url>https://www.reddit.com/user/lemonhead94</url>
-			<class>icon-reddit</class>
+			<iconclass>icon-reddit</iconclass>
 		</link>
         <link>
             <name>Follow me on Twitter</name>
             <url>https://twitter.com/_lemonhead94_</url>
-            <class>icon-twitter</class>
+            <iconclass>icon-twitter</iconclass>
         </link>
 	</footerlinks>
 </repo>
