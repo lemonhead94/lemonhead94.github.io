@@ -1,14 +1,24 @@
+#repoFooterLinks .btn {
+    text-decoration: none
+}
+
+.customicon {
+    position: relative;
+    top: 6px;
+    display: inline-block;
+}
+
 .icon-reddit {
-    background-image: url("../images/reddit.png");
-    background-position: center center;
+    background: url("../images/reddit.png") no-repeat;
+    background-size:contain;
     height: 24px;
     line-height: 24px;
     width: 24px;
 }
 
 .icon-twitter {
-    background-image: url("../images/twitter.png");
-    background-position: center center;
+    background: url("../images/twitter.png") no-repeat;
+    background-size:contain;
     height: 24px;
     line-height: 24px;
     width: 24px;
