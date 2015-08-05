@@ -122,6 +122,7 @@
 						$("<li class='list-group-item'>").append(
 							$("<a>")
 								.attr("href","screenshots.html?p="+bundleid)
+                                .attr("target", "_self")
 								.text("Screenshots")
 						)
 					);
@@ -142,6 +143,7 @@
 				,"params":[
 					['p',bundleid]
 				]
+                ,"target": "_self"
 			}
 		,"#dependencyList" :
 			{"type":"list"
@@ -163,6 +165,7 @@
 						$(p).append(
 							$("<a>")
 							.attr("href",$(data).find('url').text())
+                            .attr("target", "_self")
 							.text($(data).find('name').text())
 						);
 						$(element).append(p);
