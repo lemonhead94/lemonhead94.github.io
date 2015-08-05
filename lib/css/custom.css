@@ -44,11 +44,11 @@
     bottom: -25px;
 }
 .carousel-inner {
-    margin-bottom: 25px;
+    margin-bottom: 17px;
 }
 
 #screenshotsPreview {
-    background-color: #5A5A5A;
+    background-color: #8f9192;
 }
 
 /* iPhone < 5: */
