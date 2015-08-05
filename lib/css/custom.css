@@ -40,15 +40,23 @@
     color: black;
 }
 
+.carousel-control.right {
+    background-image: none;
+}
+
+.carousel-control.left {
+    background-image: none;
+}
+
 .carousel-indicators{
-    bottom: -25px;
+bottom: -25px;
 }
 .carousel-inner {
-    margin-bottom: 17px;
+margin-bottom: 17px;
 }
 
 #screenshotsPreview {
-    background-color: #8f9192;
+background-color: #8f9192;
 }
 
 /* iPhone < 5: */
