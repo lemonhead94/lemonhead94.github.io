@@ -23,6 +23,7 @@
   <script type="text/javascript">
 
 	bundleid = $.QueryString['p'];
+    $("#screenshotsPreview").hide();
 
     var contentBlocks = 	{
     	"#packageName" :
@@ -99,6 +100,7 @@
                         }
                         $(element).append(th);
                     });
+                    $("#screenshotsPreview").show();
                 }
             }
         ,"#screenshotsLink"	:
