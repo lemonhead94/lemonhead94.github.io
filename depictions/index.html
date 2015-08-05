@@ -57,7 +57,12 @@
         ,"#descriptionList"	:
 			{"type":"list"
 				,"source" :"package>descriptionlist>description"
-				,"paragraphElement"	: "<li id='descriptionTest' class='list-group-item'>"
+                ,"render": function(element,source){
+                    if ($(source).size() == 0) {
+                        return
+                    }
+                    $(element).append($("<li class='list-group-item'>" + source + "</li>"))
+                }
 				,"emptyListCallback":function(e){$("#descriptionPanel").hide()}
 			}
         ,"#screenshotsList"	:
