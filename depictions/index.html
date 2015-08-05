@@ -107,6 +107,7 @@
 				,"render":function(element, source){
 					$("#screenshotsLink").remove();
 					if ($(source).size() == 0) {
+                        $("#screenshotsPreview").remove();
 						return
 					}
 					// create screenshots link
