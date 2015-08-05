@@ -61,7 +61,9 @@
                     if ($(source).size() == 0) {
                         return
                     }
-                    $(element).append($("<li class='list-group-item'>" + source + "</li>"))
+                    $.each(source, function(index,data) {
+                        $(element).append($("<li class='list-group-item'>" + $(data).find('description').text() + "</li>"))
+                    });
                 }
 				,"emptyListCallback":function(e){$("#descriptionPanel").hide()}
 			}
