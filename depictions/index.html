@@ -60,74 +60,74 @@
                 ,"paragraphElement"	: "<li class='list-group-item'>"
                 ,"emptyListCallback":function(e){$("#descriptionPanel").hide()}
             }
-        ,"#descriptionList" :
-            {"type": "custom"
-                ,"source" :"package>screenshots>screenshot"
-                ,"render" : function(element,source){
-                    if ($(source).size() == 0) {
-                        return
-                    }
-                    var carousel =
-                    $(
-                        "<li id='screenshotsPreview' class='list-group-item'>"
-                            + "<div id='myCarousel' class='carousel slide' data-ride='carousel'>"
-                                + "<ol class='carousel-indicators' id='screenshotsCarousel'> </ol> "
-                                + "<div id='screenshotsList' class='carousel-inner' role='listbox'></div>"
-                                + " <a class='left carousel-control hideOnMobile' href='#myCarousel' role='button' data-slide='prev'> "
-                                    + "<span class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span> "
-                                    + "<span class='sr-only'>Previous</span> "
-                                + "</a> "
-                                + "<a class='right carousel-control hideOnMobile' href='#myCarousel' role='button' data-slide='next'>"
-                                    + "<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span>"
-                                    + "<span class='sr-only'>Next</span> "
-                                + "</a> "
-                            + "</div>"
-                        +"</li>"
-                    )
-                    $(element).append(carousel)
-                }
-            }
-        ,"#screenshotsList"	:
-            {"type":"custom"
-                ,"source" :"package>screenshots>screenshot"
-                ,"render" : function(element,source){
-                    if ($(source).size() == 0) {
-                        return
-                    }
-                    $.each(source, function(index,data) {
-                        var th;
-                        if(index == 0) {
-                            th = $("<div class='item carouselImgHeight active'>");
-                        } else {
-                            th = $("<div class='item carouselImgHeight'>");
-                        }
-                        var image = $("<img class='carouselImgHeight'>");
-                        image.attr("src",bundleid+'/screenshots/'+$(data).find('image').text())
-                        image.attr("alt", $(data).find('description').text())
-                        th.append(image)
-                        th.append($("</div>"))
-                        $(element).append(th);
-                    });
-                }
-            }
-        ,"#screenshotsCarousel" :
-            {"type":"custom"
-                ,"source" :"package>screenshots>screenshot"
-                ,"render" : function(element,source) {
-                    if ($(source).size() == 0) {
-                        return
-                    }
-                    $.each(source, function(index,data) {
-                        var th;
-                        if(index == 0) {
-                            th = $("<li data-target='#myCarousel' data-slide-to='0' class='active'></li>");
-                        } else {
-                            th = $("<li data-target='#myCarousel' data-slide-to='" + index + "'></li>");
-                        }
-                        $(element).append(th);
-                    });
-                }
-            }
+//        ,"#descriptionList" :
+//            {"type": "custom"
+//                ,"source" :"package>screenshots>screenshot"
+//                ,"render" : function(element,source){
+//                    if ($(source).size() == 0) {
+//                        return
+//                    }
+//                    var carousel =
+//                    $(
+//                        "<li id='screenshotsPreview' class='list-group-item'>"
+//                            + "<div id='myCarousel' class='carousel slide' data-ride='carousel'>"
+//                                + "<ol class='carousel-indicators' id='screenshotsCarousel'> </ol> "
+//                                + "<div id='screenshotsList' class='carousel-inner' role='listbox'></div>"
+//                                + " <a class='left carousel-control hideOnMobile' href='#myCarousel' role='button' data-slide='prev'> "
+//                                    + "<span class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span> "
+//                                    + "<span class='sr-only'>Previous</span> "
+//                                + "</a> "
+//                                + "<a class='right carousel-control hideOnMobile' href='#myCarousel' role='button' data-slide='next'>"
+//                                    + "<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span>"
+//                                    + "<span class='sr-only'>Next</span> "
+//                                + "</a> "
+//                            + "</div>"
+//                        +"</li>"
+//                    )
+//                    $(element).append(carousel)
+//                }
+//            }
+//        ,"#screenshotsList"	:
+//            {"type":"custom"
+//                ,"source" :"package>screenshots>screenshot"
+//                ,"render" : function(element,source){
+//                    if ($(source).size() == 0) {
+//                        return
+//                    }
+//                    $.each(source, function(index,data) {
+//                        var th;
+//                        if(index == 0) {
+//                            th = $("<div class='item carouselImgHeight active'>");
+//                        } else {
+//                            th = $("<div class='item carouselImgHeight'>");
+//                        }
+//                        var image = $("<img class='carouselImgHeight'>");
+//                        image.attr("src",bundleid+'/screenshots/'+$(data).find('image').text())
+//                        image.attr("alt", $(data).find('description').text())
+//                        th.append(image)
+//                        th.append($("</div>"))
+//                        $(element).append(th);
+//                    });
+//                }
+//            }
+//        ,"#screenshotsCarousel" :
+//            {"type":"custom"
+//                ,"source" :"package>screenshots>screenshot"
+//                ,"render" : function(element,source) {
+//                    if ($(source).size() == 0) {
+//                        return
+//                    }
+//                    $.each(source, function(index,data) {
+//                        var th;
+//                        if(index == 0) {
+//                            th = $("<li data-target='#myCarousel' data-slide-to='0' class='active'></li>");
+//                        } else {
+//                            th = $("<li data-target='#myCarousel' data-slide-to='" + index + "'></li>");
+//                        }
+//                        $(element).append(th);
+//                    });
+//                }
+//            }
         ,"#screenshotsLink"	:
 			{"type":"custom"
 				,"source" :"package>screenshots>screenshot"
