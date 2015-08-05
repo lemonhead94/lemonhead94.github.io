@@ -54,7 +54,7 @@
 					if(res==0) {$(element).hide()}
 				}
 			}
-        ,"#descriptionList"	:
+        ,"#descriptionText"	:
 			{"type":"custom"
 				,"source" :"package>descriptionlist>description"
                 ,"render": function(element,source){
@@ -63,7 +63,7 @@
                         return
                     }
                     $.each(source, function(index,data) {
-                        $(element).append($("<li class='list-group-item'>" + $(data).text() + "</li>"))
+                        $(element).append($(data).text())
                     });
                 }
 			}
@@ -222,6 +222,7 @@
 	<div class="container">
 		<h5>DESCRIPTION</h5>
 		<ul id="descriptionList" class="list-group">
+            <li id="descriptionText" class='list-group-item'></li>
             <li id="screenshotsPreview" class='list-group-item'>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators" id="screenshotsCarousel">
