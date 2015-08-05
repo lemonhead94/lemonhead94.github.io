@@ -58,13 +58,14 @@
 			{"type":"custom"
 				,"source" :"package>descriptionlist>description"
                 ,"render": function(element,source){
-                    log("Source: " + source)
-                    $.each(source, function(index,data) {
-                        $(element).append($("<li class='list-group-item'>" + data + "</li>"))
-                        log("Data: " + data)
-                    });
+                    if ($(source).size() == 0) {
+                        $("#descriptionPanel").hide()
+                        return
+                    }
+                    //$.each(source, function(index,data) {
+                        $(element).append($("<li class='list-group-item'>" + source + "</li>"))
+                    //});
                 }
-                ,"emptyListCallback":function(e){$("#descriptionPanel").hide()}
 			}
         ,"#screenshotsList"	:
             {"type":"custom"
