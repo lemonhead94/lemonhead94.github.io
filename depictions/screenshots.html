@@ -24,25 +24,25 @@
 
     var contentBlocks = {
         "#screenshotCarousel" :
-        {"type":"custom"
-            ,"source" :"package>screenshots>screenshot"
-            ,"render" : function(element,source) {
-            console.log($(source).size());
-            if ($(source).size() == 0) {
-                $(element).append($("<div class='alert alert-danger'>The aren't any screenshots for this package</div>"));
-                return;
-            }
-            $.each(source, function(index,data) {
-                var th;
-                if(index == 0) {
-                    th = $("<li data-target='#myCarousel' data-slide-to='0' class='active'></li>");
-                } else {
-                    th = $("<li data-target='#myCarousel' data-slide-to='" + index + "'></li>");
+            {"type":"custom"
+                ,"source" :"package>screenshots>screenshot"
+                ,"render" : function(element,source) {
+                console.log($(source).size());
+                if ($(source).size() == 0) {
+                    $(element).append($("<div class='alert alert-danger'>The aren't any screenshots for this package</div>"));
+                    return;
                 }
-                $(element).append(th);
-            });
+                $.each(source, function(index,data) {
+                    var th;
+                    if(index == 0) {
+                        th = $("<li data-target='#myCarousel' data-slide-to='0' class='active'></li>");
+                    } else {
+                        th = $("<li data-target='#myCarousel' data-slide-to='" + index + "'></li>");
+                    }
+                    $(element).append(th);
+                });
 
-        }
+            }
         }
     }
 
