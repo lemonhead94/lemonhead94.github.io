@@ -29,6 +29,7 @@ function data_loader_engine(contentBlocks,xml) {
 				url = url+'?'+params.join('&');
 				$(key).append( $("<a></a>")
 					.attr("href",url)
+                    .attr("target", "_self")
 					.text(contentInfo.text)
 				 );
 				break;				
