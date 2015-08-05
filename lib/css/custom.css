@@ -41,10 +41,14 @@
 }
 
 .carousel-indicators{
-    bottom:-50px;
+    bottom: -25px;
 }
 .carousel-inner {
-    margin-bottom:50px;
+    margin-bottom: 25px;
+}
+
+#screenshotsPreview {
+    background-color: #5A5A5A;
 }
 
 /* iPhone < 5: */
