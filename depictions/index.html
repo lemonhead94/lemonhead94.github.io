@@ -63,7 +63,7 @@
                         return
                     }
                     $.each(source, function(index,data) {
-                        $(element).append($("<li class='list-group-item'>" + $(data).find('description').text() + "</li>"))
+                        $(element).append($("<li class='list-group-item'>" + $(data).text() + "</li>"))
                     });
                 }
 			}
@@ -90,7 +90,7 @@
                     });
                 }
             }
-        ,"#screenshotCarousel" :
+        ,"#screenshotsCarousel" :
             {"type":"custom"
                 ,"source" :"package>screenshots>screenshot"
                 ,"render" : function(element,source) {
@@ -224,7 +224,7 @@
 		<ul id="descriptionList" class="list-group">
             <li id="screenshotsPreview" class='list-group-item'>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators" id="screenshotCarousel">
+                    <ol class="carousel-indicators" id="screenshotsCarousel">
                     </ol>
                     <div id="screenshotsList" class="carousel-inner" role="listbox">
 
