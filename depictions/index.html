@@ -211,14 +211,6 @@
     }); // ready
   </script>
   <script>
-        $(document).ready(function() {
-            $("#myCarousel").swiperight(function() {
-                $("#myCarousel").carousel('prev');
-            });
-            $("#myCarousel").swipeleft(function() {
-                $("#myCarousel").carousel('next');
-            });
-        });
         $(document).on("pageshow", "[data-role='page']", function () {
             $('div.ui-loader').remove();
         });
