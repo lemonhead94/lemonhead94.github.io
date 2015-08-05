@@ -54,19 +54,39 @@
 					if(res==0) {$(element).hide()}
 				}
 			}
-        ,"#descriptionText"	:
-			{"type":"custom"
-				,"source" :"package>descriptionlist>description"
-                ,"render": function(element,source){
+        ,"#descriptionList"	:
+            {"type":"list"
+                ,"source" :"package>descriptionlist>description"
+                ,"paragraphElement"	: "<li class='list-group-item'>"
+                ,"emptyListCallback":function(e){$("#descriptionPanel").hide()}
+            }
+        ,"#descriptionList" :
+            {"type": "custom"
+                ,"source" :"package>screenshots>screenshot"
+                ,"render" : function(element,source){
                     if ($(source).size() == 0) {
-                        $("#descriptionPanel").hide()
                         return
                     }
-                    $.each(source, function(index,data) {
-                        $(element).append($(data).text())
-                    });
+                    var carousel =
+                    $(
+                        "<li id='screenshotsPreview' class='list-group-item'>"
+                            + "<div id='myCarousel' class='carousel slide' data-ride='carousel'>"
+                                + "<ol class='carousel-indicators' id='screenshotsCarousel'> </ol> "
+                                + "<div id='screenshotsList' class='carousel-inner' role='listbox'></div>"
+                                + " <a class='left carousel-control hideOnMobile' href='#myCarousel' role='button' data-slide='prev'> "
+                                    + "<span class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span> "
+                                    + "<span class='sr-only'>Previous</span> "
+                                + "</a> "
+                                + "<a class='right carousel-control hideOnMobile' href='#myCarousel' role='button' data-slide='next'>"
+                                    + "<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span>"
+                                    + "<span class='sr-only'>Next</span> "
+                                + "</a> "
+                            + "</div>"
+                        +"</li>"
+                    )
+                    $(element).append(carousel)
                 }
-			}
+            }
         ,"#screenshotsList"	:
             {"type":"custom"
                 ,"source" :"package>screenshots>screenshot"
@@ -95,7 +115,6 @@
                 ,"source" :"package>screenshots>screenshot"
                 ,"render" : function(element,source) {
                     if ($(source).size() == 0) {
-                        $("#screenshotsPreview").remove();
                         return
                     }
                     $.each(source, function(index,data) {
@@ -224,7 +243,6 @@
 	<div class="container">
 		<h5>DESCRIPTION</h5>
 		<ul id="descriptionList" class="list-group">
-            <li id="descriptionText" class='list-group-item'></li>
             <li id="screenshotsPreview" class='list-group-item'>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators" id="screenshotsCarousel">
