@@ -62,10 +62,10 @@
                         return
                     }
                     $.each(source, function(index,data) {
-                        $(element).append($("<li class='list-group-item'>" + $(data).find('description').text() + "</li>"))
+                        $(element).append($("<li class='list-group-item'>" + data + "</li>"))
                     });
                 }
-				
+                //,"emptyListCallback":function(e){$("#descriptionPanel").hide()}
 			}
         ,"#screenshotsList"	:
             {"type":"custom"
