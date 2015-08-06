@@ -128,12 +128,14 @@
 				,"emptyListCallback":function(e){$("#changesList").hide()}
 			}
 		,"#changelogLink" :
-			{"type":"link"
-				,"text":"Full Changelog"
-				,"url":"changelog.html"
-				,"params":[
-					['p',bundleid]
-				]
+			{"type":"custom"
+                ,"render":function(element) {
+                    $("#changelogLink").remove();
+                    $("#changesList").append(
+                            $("<li onclick=\"window.location.href = 'changelog.html?p=" + bundleid + "';\" class='list-group-item customLinkBtn'>")
+                            .append("Full Changelog")
+                    );
+                }
 			}
 		,"#dependencyList" :
 			{"type":"list"
