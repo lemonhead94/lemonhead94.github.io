@@ -114,7 +114,7 @@
 					}
 					// create screenshots link
 					$("#descriptionList").append(
-						$("<li onclick=\"window.location.href = 'screenshots.html?p=" + bundleid + "';\" class='list-group-item customLinkBtn'>")
+						$("<li onclick=\"window.open('screenshots.html?p=" + bundleid + "', '_self');\" class='list-group-item customLinkBtn'>")
                                 .append("All Screenshots & Infos")
 					);
 				}
@@ -132,7 +132,7 @@
                 ,"render":function(element) {
                     $("#changelogLink").remove();
                     $("#changesList").append(
-                            $("<li onclick=\"window.location.href = 'changelog.html?p=" + bundleid + "';\" class='list-group-item customLinkBtn'>")
+                            $("<li onclick=\"window.open('changelog.html?p=" + bundleid + "', '_self');\" class='list-group-item customLinkBtn'>")
                             .append("Full Changelog")
                     );
                 }
