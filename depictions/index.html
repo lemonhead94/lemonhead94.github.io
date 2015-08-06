@@ -58,7 +58,7 @@
         ,"#descriptionText"	:
             {"type":"list"
                 ,"source" :"package>descriptionlist>description"
-                ,"paragraphElement"	: "<li class='list-group-item'>"
+                ,"paragraphElement"	: "<li style='list-style-type: none;'>"
                 ,"emptyListCallback":function(e){$("#descriptionPanel").hide()}
             }
         ,"#screenshotsList"	:
@@ -217,7 +217,7 @@
 	<div class="container">
 		<h5>DESCRIPTION</h5>
         <ul id="descriptionList" class="addCarousel list-group">
-            <div id="descriptionText"></div>
+            <div id="descriptionText" class="list-group-item"></div>
             <li id='screenshotsPreview' style="display: none;" class='list-group-item'>
                 <div id='myCarousel' class='carousel slide' data-ride='carousel'>
                 <ol class='carousel-indicators' id='screenshotsCarousel'> </ol>
