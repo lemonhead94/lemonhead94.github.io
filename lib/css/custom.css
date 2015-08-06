@@ -8,14 +8,14 @@
     display: inline-block;
 }
 
-.customLinkBtn {
+li.customLinkBtn {
     color: #337ab7;
     text-decoration: none;
     cursor: pointer;
     text-decoration: none;
 }
 
-.customLinkBtn:focus .customLinkBtn:hover {
+li.customLinkBtn:hover, li.customLinkBtn:focus{
     color: #23527c;
     background-color: #e6e6e6;
     border-color: #adadad;
