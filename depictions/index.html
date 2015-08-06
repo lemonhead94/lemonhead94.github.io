@@ -114,12 +114,8 @@
 					}
 					// create screenshots link
 					$("#descriptionList").append(
-						$("<li style='cursor: pointer;' onclick=\"window.location.href = 'screenshots.html?p=" + bundleid + "';\" class='list-group-item btn-default'>").append(
-							$("<a>")
-								.attr("href","screenshots.html?p="+bundleid)
-                                .attr("target", "_self")
-								.text("All Screenshots & Infos")
-						)
+						$("<li style='cursor: pointer;' onclick=\"window.location.href = 'screenshots.html?p=" + bundleid + "';\" class='list-group-item btn-default'>")
+                                .append("All Screenshots & Infos")
 					);
 				}
 			}
