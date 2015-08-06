@@ -8,6 +8,18 @@
     display: inline-block;
 }
 
+.customLinkBtn {
+    color: #337AE1;
+    text-decoration: none;
+    cursor: default;
+}
+
+.customLinkBtn:focus .customLinkBtn:hover {
+    color: #23527c;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .icon-reddit {
     background: url("../images/reddit.png") no-repeat;
     background-size:contain;
