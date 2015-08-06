@@ -11,13 +11,12 @@
 .customLinkBtn {
     color: #337ab7;
     text-decoration: none;
-    cursor: default;
+    cursor: pointer;
 }
 
 .customLinkBtn:focus .customLinkBtn:hover {
     color: #23527c;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .icon-reddit {
