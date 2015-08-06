@@ -114,7 +114,7 @@
 					}
 					// create screenshots link
 					$("#descriptionList").append(
-						$("<li class='list-group-item'>").append(
+						$("<li style='cursor: pointer;' onclick='window.location.href = 'screenshots.html?p=" + bundeleid + "';' class='list-group-item btn-default'>").append(
 							$("<a>")
 								.attr("href","screenshots.html?p="+bundleid)
                                 .attr("target", "_self")
