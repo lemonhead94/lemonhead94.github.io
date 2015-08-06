@@ -15,7 +15,7 @@ li.customLinkBtn {
     text-decoration: none;
 }
 
-li.customLinkBtn:hover, li.customLinkBtn:focus{
+li.customLinkBtn:hover{
     color: #23527c;
     background-color: #e6e6e6;
     border-color: #adadad;
